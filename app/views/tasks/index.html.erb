@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Tasks</h1>
+  <ul> <% @tasks.each do |task| %>
+    <li>Title | <%= link_to task.title, task_path(task.id) %> Status = <%= task.completed %></li>
+  <% end %>
+  </ul>
+<%= link_to "ADD POST", tasks_new_path %>
+
+
+</div>
